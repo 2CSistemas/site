@@ -129,7 +129,7 @@ class Common {
 			'banner_elementor'  => softo_meta( 'banner_elementor_template', $page_id ),
 			'banner'            => softo_set( softo_meta( 'banner_page_background', $page_id ), 'url' ),
 			'title'             => ($title),
-			'text'             => ($text),
+			'text'              => ($text),
 			'enable_banner'     => softo_meta( 'banner_page_banner', $page_id ),
 			'date'              => $options->get( 'single_post_date', 1 ),
 			'author'            => $options->get( 'single_post_author', 1 ),
