@@ -1,0 +1,68 @@
+<?php
+return array(
+	'title'      => esc_html__( 'Logo Setting', 'softo' ),
+	'id'         => 'logo_setting',
+	'desc'       => '',
+	'subsection' => false,
+	'fields'     => array(
+		array(
+			'id'       => 'image_favicon',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Favicon', 'softo' ),
+			'subtitle' => esc_html__( 'Insert site favicon image', 'softo' ),
+			'default'  => array( 'url' => get_template_directory_uri() . '/assets/images/favicon.ico' ),
+		),
+		array(
+            'id' => 'dark_logo_show',
+            'type' => 'switch',
+            'title' => esc_html__('Enable Dark Logo', 'softo'),
+            'default' => true,
+        ),
+		array(
+			'id'       => 'dark_logo',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Dark Logo Image', 'softo' ),
+			'subtitle' => esc_html__( 'Insert site Dark logo image', 'softo' ),
+			'required' => array( 'dark_logo_show', '=', true ),
+		),
+		array(
+			'id'       => 'dark_logo_dimension',
+			'type'     => 'dimensions',
+			'title'    => esc_html__( 'Dark Logo Dimentions', 'softo' ),
+			'subtitle' => esc_html__( 'Select Dark Logo Dimentions', 'softo' ),
+			'units'    => array( 'em', 'px', '%' ),
+			'default'  => array( 'Width' => '', 'Height' => '' ),
+			'required' => array( 'dark_logo_show', '=', true ),
+		),
+		array(
+            'id' => 'light_logo_show',
+            'type' => 'switch',
+            'title' => esc_html__('Enable Light Logo', 'softo'),
+            'default' => true,
+        ),
+		array(
+			'id'       => 'light_logo',
+			'type'     => 'media',
+			'url'      => true,
+			'title'    => esc_html__( 'Light Logo Image', 'softo' ),
+			'subtitle' => esc_html__( 'Insert site Light logo image', 'softo' ),
+			'required' => array( 'light_logo_show', '=', true ),
+		),
+		array(
+			'id'       => 'light_logo_dimension',
+			'type'     => 'dimensions',
+			'title'    => esc_html__( 'Light Logo Dimentions', 'softo' ),
+			'subtitle' => esc_html__( 'Select Light Logo Dimentions', 'softo' ),
+			'units'    => array( 'em', 'px', '%' ),
+			'default'  => array( 'Width' => '', 'Height' => '' ),
+			'required' => array( 'light_logo_show', '=', true ),
+		),
+		array(
+			'id'       => 'logo_settings_section_end',
+			'type'     => 'section',
+			'indent'      => false,
+		),
+	),
+);
